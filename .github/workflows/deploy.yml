@@ -3,7 +3,7 @@ name: Deploy static files to S3 Bucket
 on:
     push:
         branches:
-            -main
+            - main
     pull_request:
         branches:
             - main
@@ -34,5 +34,5 @@ jobs:
 
           - name: upload files to S3
             run: |
-              aws s3 cp . s3://project2.frontend.com/ --recursive
+              aws s3 cp . s3://project2.frontend/ --recursive
 
